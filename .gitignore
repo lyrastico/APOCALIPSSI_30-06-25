@@ -1,0 +1,41 @@
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+**/node_modules/
+
+# Build output
+**/dist/
+**/build/
+
+# Environment files
+.env
+.env.*.local
+
+# IDE / Editor settings
+.vscode/
+*.code-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Docker
+**/.dockerignore
+**/Dockerfile
+
+# Optional: exclude VSCode settings if unwanted
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Coverage (e.g., Jest)
+coverage/
+
+# OS-specific
+ehthumbs.db
+Icon?
+Desktop.ini
