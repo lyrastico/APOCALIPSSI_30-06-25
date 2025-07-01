@@ -4,7 +4,7 @@ const User = require('../models/User');
 const router = express.Router();
 
 // Secret JWT
-const SECRET = process.env.JWT_SECRET;
+const SECRET = process.env.JWT_SECRET || 'dev_secret_123';
 
 // ✅ Inscription
 router.post('/register', async (req, res) => {
