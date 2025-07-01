@@ -12,7 +12,6 @@ function App() {
         <Route path="/" element={<div className="home"><h1>APOCAL’IPSSI</h1></div>} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/logout" element={<div>Déconnexion</div>} />
       </Routes>
     </Router>
   );
