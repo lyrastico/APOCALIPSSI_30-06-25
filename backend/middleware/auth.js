@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
-const SECRET = 'votre_clé_secrète';
+// const SECRET = 'votre_clé_secrète';
+const SECRET = process.env.JWT_SECRET || 'dev_secret_123'; // Fallback for development
 
 function authMiddleware(req, res, next) {
   const token = req.headers.authorization?.split(' ')[1]; // format: Bearer <token>

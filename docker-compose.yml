@@ -11,12 +11,16 @@ services:
       - backend
 
   backend:
+    environment:
+      - HUGGINGFACE_API_KEY=${HUGGINGFACE_API_KEY}
+      - JWT_SECRET=${JWT_SECRET}
     build: ./backend
     ports:
       - "5000:5000"
     volumes:
         - ./backend:/app
         - /app/node_modules
+        - ./backend/uploads:/app/uploads
     depends_on:
       - mongo
 
