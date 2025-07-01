@@ -29,7 +29,10 @@ function Navbar() {
             <li><NavLink to="/login">Connexion</NavLink></li>
           </>
         ) : (
-          <li><button onClick={handleLogout} className="logout-button">Déconnexion</button></li>
+          <>
+            <li><NavLink to="/upload">Importer un PDF</NavLink></li>
+            <li><button onClick={handleLogout} className="logout-button">Déconnexion</button></li>
+          </>
         )}
       </ul>
     </nav>
