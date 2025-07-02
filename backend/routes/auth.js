@@ -5,6 +5,8 @@ const router = express.Router();
 
 const SECRET = 'votre_clé_secrète';
 
+// Routes
+
 router.post('/register', async (req, res) => {
   const { nom, prenom, email, pseudo, motDePasse } = req.body;
   try {
