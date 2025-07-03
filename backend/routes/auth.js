@@ -3,10 +3,10 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const router = express.Router();
 
-// Secret JWT
 const SECRET = 'votre_clé_secrète';
 
-// ✅ Inscription
+// Routes
+
 router.post('/register', async (req, res) => {
   const { nom, prenom, email, pseudo, motDePasse } = req.body;
   try {
@@ -18,7 +18,6 @@ router.post('/register', async (req, res) => {
   }
 });
 
-// ✅ Connexion
 router.post('/login', async (req, res) => {
   const { email, motDePasse } = req.body;
   try {
@@ -33,7 +32,6 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// ✅ Déconnexion (frontend supprime le token côté client)
 router.post('/logout', (req, res) => {
   res.json({ message: 'Déconnecté avec succès (à gérer côté client)' });
 });
