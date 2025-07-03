@@ -39,8 +39,7 @@ Ta mission :
       },
     ];
 
-    // Appel à l'API HTTP de ton collègue
-    const apiResponse = await axios.post('http://176.144.45.42:1234/v1/chat/completions', {
+    const apiResponse = await axios.post('http://xxx.xxx.xx.xx:xxxx/v1/chat/completions', {
       model: 'mistralai/mistral-7b-instruct-v0.3',
       messages,
       temperature: 0.7,
